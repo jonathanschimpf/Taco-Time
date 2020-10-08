@@ -1,0 +1,26 @@
+{
+  "name": "taco-time",
+  "version": "1.0.0",
+  "description": "node + express + handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanschimpf/Taco-Time.git"
+  },
+  "author": "Jonathan Schimpf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathanschimpf/Taco-Time/issues"
+  },
+  "homepage": "https://github.com/jonathanschimpf/Taco-Time#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
