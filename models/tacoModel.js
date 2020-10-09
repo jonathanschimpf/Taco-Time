@@ -7,19 +7,25 @@ var taco = {
 
 all: function() {
 
-    orm.selectAll({});
+    orm.all({});
 
 },
 
 create: function () {
 
-    orm.insertOne({});
+    orm.create({});
 
 },
 
 update: function () {
 
-    orm.updateOne({});
+    orm.update({});
+
+},
+
+remove: function () {
+
+    orm.remove({});
 
 }
 
