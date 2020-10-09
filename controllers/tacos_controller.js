@@ -79,14 +79,15 @@ router.put("/api/tacos/:id", function (req, res) {
 
 });
 
+// -- //
 
 // deleting route (if time allows, not a requirement)
 
-router.delete("/api/tacos/:id", (req, res) => {
+router.remove("/api/tacos/:id", (req, res) => {
 
     const tacoId = req.params.id;
 
-    taco.delete(tacoId, function () {
+    taco.remove(tacoId, function () {
 
         res.status(200).end();
 
@@ -95,6 +96,6 @@ router.delete("/api/tacos/:id", (req, res) => {
 });
 
 
-
+// export router
 
 module.exports = router;
