@@ -76,7 +76,7 @@ var orm = {
             if (err) {
 
                 throw err;
-
+                
             }
 
             // returns tacos_db result in callback

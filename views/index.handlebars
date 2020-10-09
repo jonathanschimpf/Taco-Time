@@ -1,2 +1,47 @@
 
-{{!-- HTML INDEX GOES HERE --}}
+<div class="container">
+
+  <h1>TACO TIME</h1>
+
+</div>
+
+
+<div class="container">
+  <h2>Want Some Tacos?</h2>
+  <h4>Enter your desired taco type and smash submit.</h4>
+  <form class="create-form">
+
+    <p>Taco Type:</p>
+    <div>
+      <textarea type="text" id="taco" rows="4" name="name" placeholder="Cochinita Pibil Tacos"></textarea>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div>
+  <div>
+    <h2>Dig in.</h2>
+    <ul>
+      {{#each tacos}}
+      {{#unless devoured}}
+      {{> tacos/taco-block devoured=false}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+
+  <div>
+    <h2>Devoured Tacos</h2>
+    <ul>
+      {{#each tacos}}
+      {{#if devoured}}
+      {{> tacos/taco-block devoured=true}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+

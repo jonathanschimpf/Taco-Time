@@ -29,7 +29,7 @@ router.get("/", function (req, res) {
 });
 
 
-//--//
+// -- //
 
 
 router.post("/api/tacos", function (req, res) {
@@ -51,7 +51,7 @@ router.post("/api/tacos", function (req, res) {
 });
 
 
-//--//
+// -- //
 
 
 router.put("/api/tacos/:id", function (req, res) {
@@ -84,7 +84,7 @@ router.put("/api/tacos/:id", function (req, res) {
 
 // remove route 
 
-router.remove("/api/tacos/:id", (req, res) => {
+router.delete("/api/tacos/:id", (req, res) => {
 
     const tacoId = req.params.id;
 
