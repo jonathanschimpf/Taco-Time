@@ -38,9 +38,10 @@ $(function () {
 
                 location.reload();
 
-            }
+            },
 
-        );
+            document.querySelector("#bottom").scrollIntoView()
+        );  
 
     });
 
