@@ -81,7 +81,8 @@ router.put("/api/tacos/:id", function (req, res) {
 
 // -- //
 
-// deleting route (if time allows, not a requirement)
+
+// remove route 
 
 router.remove("/api/tacos/:id", (req, res) => {
 

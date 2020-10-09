@@ -67,29 +67,113 @@ function objToSql(ob) {
 var orm = {
 
 
-    all: function () {
+    all: function (tableInput, cb) {
+
+        var queryString = "SELECT * FROM " + tableInput + ";";
+
+        connection.query(queryString, function (err, result) {
+
+            if (err) {
+
+                throw err;
+
+            }
+
+            // returns tacos_db result in callback
+
+            cb(result);
+
+        });
 
     },
 
 
-    create: function() {
+    // -- //
 
+
+    create: function (table, cols, vals, cb) {
+
+        var queryString = "INSERT INTO " + table;
+
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+
+        console.log("insert query: ", queryString);
+
+        connection.query(queryString, vals, (err, result) => {
+
+            if (err) {
+
+                throw err;
+
+            }
+
+            cb(result);
+
+        });
 
     },
 
 
-    update: function() {
+    // -- //
 
+
+    // example of objColVals would be {taco_name: chorizo, devoured: true}
+
+    update: function (table, objColVals, condition, cb) {
+
+        var queryString = "UPDATE " + table;
+
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log("UPDATE query: ", queryString);
+
+        connection.query(queryString, (err, result) => {
+
+            if (err) {
+
+                throw err;
+
+            }
+
+            cb(result);
+
+        });
 
     },
 
-    delete: function() {
 
+    // -- //
+
+
+    remove: function (table, col, val, cb) {
+
+        connection.query("DELETE FROM ?? WHERE ?? = ?",
+
+            [table, col, val],
+
+            (err, data) => {
+
+                if (err)
+
+                    throw err;
+
+                return cb(data);
+
+            });
 
     }
 
-
 };
 
+
+//export of the orm object for tacoModel.js
 
 module.exports = orm;
