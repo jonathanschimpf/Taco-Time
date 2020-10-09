@@ -1,37 +1,49 @@
+// import the ORM tcreates functions that will interact with the database.
+
 var orm = require("../config/orm.js");
 
 
 
+// calls on the orm functions..
+
 var taco = {
 
 
-all: function() {
+    // returns RowDataPacket array results 
+    //from tacos table to router
 
-    orm.all({});
+    all: function (cb) {
 
-},
+        orm.all("tacos", res => cb(res));
 
-create: function () {
+    },
 
-    orm.create({});
+    // the variables cols and vals are arrays.
 
-},
+    create: function (cols, vals, cb) {
 
-update: function () {
+        orm.create("tacos", cols, vals, res => cb(res));
 
-    orm.update({});
+    },
 
-},
 
-remove: function () {
+    update: function (objColVals, condition, cb) {
 
-    orm.remove({});
+        orm.update("tacos", objColVals, condition, res => cb(res));
 
-}
+    },
 
+
+    remove: function (val, cb) {
+
+        orm.remove("tacos", "id", val, res => cb(res));
+        
+
+    }
 
 };
 
 
 
-module.exports =taco;
+
+module.exports = taco;
