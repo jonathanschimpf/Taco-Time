@@ -48,7 +48,7 @@ $(function () {
 
     // UPDATE // devoured button that lives next to taco item
 
-    $(".change-devoured").on("click", function (event) {
+    $(".changeto-devoured").on("click", function (event) {
 
         var id = $(this).data("id");
 

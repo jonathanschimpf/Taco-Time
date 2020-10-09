@@ -1,15 +1,15 @@
 
+{{!-- partial block helps dry up the index.handlebars code so we don't repeat ourself. --}}
 
-{{!-- this speaks to the assets folder tacos.js for the buttons and form --}}
+<li>
 
+	{{ taco_name }}
 
-	<button class="changeto-devour" data-id="{{id}}" data-newlydevoured="{{sleep}}">
-		{{#unless devoured}} Devour It!{{/unless}}
+	<button class="changeto-devoured" data-id="{{id}}" data-newlydevoured="{{sleep}}">
+		{{#if devoured}} Order Again? {{else}} Devour it! {{/if}}
 	</button>
 
-	<button class="remove-taco" data-id="{{id}}">
-		DELETE
-	</button>
+	<button class="remove-taco" data-id="{{id}}">Delete Taco. </button>
 
+</li>
 
-{{!-- DELETE ^ IS AN OPTIONAL WISHLIST ITEM --}}
