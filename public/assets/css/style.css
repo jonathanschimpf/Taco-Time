@@ -1,0 +1,99 @@
+body {
+
+    font-family: 'Work Sans', sans-serif !important;
+
+}
+
+
+.jumbotron {
+
+    padding-top: 25px !important;
+    padding-bottom: 15px !important;
+    background: rgb(233, 233, 233) !important;
+    box-shadow: 5px 5px 5px 5px #000;
+    
+
+}
+
+.card {
+
+    
+    background: rgb(233, 233, 233) !important;
+    box-shadow: 10px 10px 9px #000;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+
+}
+
+
+li {
+
+    margin-bottom: 15px !important;
+    font-size: 19px !important;
+
+}
+
+
+h1 {
+
+    font-family: 'Work Sans', sans-serif !important;
+    font-size: 36px!important;
+} 
+
+h2 {
+
+    font-family: 'Work Sans', sans-serif !important;
+    margin-bottom: 28px !important;
+
+} 
+
+button {
+
+    font-family: 'Work Sans', sans-serif !important;
+    color: white !important;
+    border-radius: 5px !important;
+    border: none !important;
+    margin-left: 15px !important;
+    padding: 1px 6px !important;
+    background: black !important;
+
+}
+
+
+.form-button {
+
+    margin: 20px 0 !important;
+    background: black !important;
+
+}
+
+
+
+textarea {
+
+    border: 1px solid black !important;
+    border-radius: 5px !important;
+    background: rgb(245, 245, 245) !important;
+    
+
+}
+
+.btn:hover {
+
+    background: #bb2323 !important;
+    transition: all 0.55s ease-in-out !important;
+
+}
+
+
+
+
+.form-button:hover {
+
+    background: #bb2323 !important;
+    transition: all 0.55s ease-in-out !important;
+
+}
+
+
+

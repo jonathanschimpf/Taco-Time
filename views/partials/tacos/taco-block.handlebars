@@ -1,15 +1,14 @@
-
 {{!-- partial block helps dry up the index.handlebars code so we don't repeat ourself. --}}
 
 <li>
 
 	{{ taco_name }}
 
-	<button class="changeto-devoured" data-id="{{id}}" data-newlydevoured="{{sleep}}">
-		{{#if devoured}} Order Again? {{else}} Devour it! {{/if}}
+	{{#unless devoured}}
+	<button type="button" class="changeto-devoured btn btn-dark btn-sm" data-id="{{id}}" data-devoured="{{devoured}}">
+		Devour!
 	</button>
-
-	<button class="remove-taco" data-id="{{id}}">Delete Taco. </button>
+	{{/unless}}
+	<button type="button" class="remove-taco btn btn-dark btn-sm" data-id="{{id}}">Delete. </button>
 
 </li>
-

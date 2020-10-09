@@ -58,9 +58,9 @@ router.put("/api/tacos/:id", function (req, res) {
 
     var condition = "id = " + req.params.id;
 
-    console.log("condition:", condition);
+    console.log("condition", condition);
 
-    taco.update({ devoured: req.body.devoured }, condition,
+    taco.update({ devoured: true }, condition,
 
         function (result) {
 

@@ -1,47 +1,65 @@
-
-<div class="container">
-
-  <h1>TACO TIME</h1>
-
-</div>
+<img src="../assets/img/it's_taco_time.jpg" class="img-fluid" alt="Responsive image">
 
 
-<div class="container">
-  <h2>Want Some Tacos?</h2>
-  <h4>Enter your desired taco type and smash submit.</h4>
-  <form class="create-form">
+{{!-- jumbotron + search form and button  --}}
 
-    <p>Taco Type:</p>
-    <div>
-      <textarea type="text" id="taco" rows="4" name="name" placeholder="Cochinita Pibil Tacos"></textarea>
+
+<div class="jumbotron">
+    <div class="container-fluid text-center">
+        <h2 class="display-4">Want Some Tacos?</h2>
+        <p>Enter desired taco type:</p>
+        <form class="create-form form-group">
+            <div>
+                <textarea type="text" id="taco" rows="2" name="name" placeholder=""></textarea>
+            </div>
+            <button type="submit" type="button" class="btn btn-dark btn-sm form-button">Submit</button>
+        </form>
     </div>
-
-    <button type="submit">Submit</button>
-  </form>
 </div>
 
-<div>
-  <div>
-    <h2>Dig in.</h2>
-    <ul>
-      {{#each tacos}}
-      {{#unless devoured}}
-      {{> tacos/taco-block devoured=false}}
-      {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
+
+<hr>
+<br>
 
 
-  <div>
-    <h2>Devoured Tacos</h2>
-    <ul>
-      {{#each tacos}}
-      {{#if devoured}}
-      {{> tacos/taco-block devoured=true}}
-      {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
+{{!-- information cards holding the requested items and devoured --}}
 
+
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h2>Dig in.</h2>
+                        <hr>
+                        <ul>
+                            {{#each tacos}}
+                            {{#unless devoured}}
+                            {{> tacos/taco-block devoured=false}}
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h2>Devoured Tacos.</h2>
+                        <hr>
+                        <ul>
+                            {{#each tacos}}
+                            {{#if devoured}}
+                            {{> tacos/taco-block devoured=true}}
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
