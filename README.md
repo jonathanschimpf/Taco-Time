@@ -94,9 +94,9 @@ This taco themed modular application allows for custom user input and upon submi
 
 ---
 
-<p>&nbsp;<p>
-<p align= "center"><img src="public/assets/gif/TACO-TIME-WALKTHROUGH.gif" alt="animated" /></p>
-<p>&nbsp;</p>
+
+<p align= "center"><img src="public/assets/gif/TACO-TIME-WALKTHROUGH.gif" alt="animated" href="https://taco-time-handlebars.herokuapp.com/" /></p>
+
 
 
 
