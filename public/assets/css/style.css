@@ -54,6 +54,9 @@ body {
     box-shadow: 10px 10px 9px #000;
     margin-right: 10px !important;
     margin-left: 10px !important;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
 
 }
 
