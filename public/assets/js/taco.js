@@ -51,6 +51,8 @@ $(function () {
 
     $(".changeto-devoured").on("click", function (event) {
 
+        event.preventDefault();
+
         var id = $(this).data("id");
 
         console.log(id);
@@ -93,6 +95,8 @@ $(function () {
     // REMOVE // remove button
 
     $(".remove-taco").on("click", function(event) {
+
+        event.preventDefault();
 
         let id = $(this).data("id");
     
